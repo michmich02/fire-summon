@@ -1,10 +1,22 @@
 # Fire Summon
 
-A browser-based interactive creative coding experiment by Michelle Guan.
+> A hand-tracked 3D fire ritual.
 
-## Live demo
+[**View live demo →**](https://michmich02.github.io/fire-summon/)
 
-https://michmich02.github.io/fire-summon/
+## Overview
+
+Fire Summon is an embodied interaction prototype that lets a user call and shape a volumetric fire effect with hand gestures. It combines real-time tracking with a cinematic Three.js scene.
+
+## Interaction
+
+- Allow camera access.
+- Keep both hands visible in good lighting.
+- Follow the gesture cues to summon and control the fire.
+
+## Built with
+
+`React` · `TypeScript` · `Three.js` · `MediaPipe`
 
 ## Run locally
 
@@ -12,14 +24,10 @@ https://michmich02.github.io/fire-summon/
 python3 -m http.server 8000 --directory docs
 ```
 
-Open http://localhost:8000. Camera access requires localhost or HTTPS. Use a desktop browser and good lighting; allow camera or microphone access when the experience asks for it. External models and CDN scripts require internet access.
+Open [http://localhost:8000](http://localhost:8000) in a desktop browser. Camera and microphone APIs require localhost or HTTPS; external models and CDN dependencies require an internet connection.
 
-## Files
+## Design notes
 
-The root contains the project source. `docs/` contains the prepared static demo.
-
-## Publishing
-
-Enable GitHub Pages with **Deploy from a branch**, branch **main**, folder **/docs**.
-
-Camera, microphone and gesture behavior should be verified on the target device.
+- Immediate visual feedback keeps the gesture-to-effect relationship legible.
+- The experience is designed as a focused, full-screen interaction.
+- Processing happens in the browser; camera and microphone streams are not uploaded by this project.
